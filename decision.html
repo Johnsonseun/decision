@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: red;
+            color: white;
+        }
+        .no {
+            background-color: green;
+            color: rgb(18, 17, 17);
+        }
+        .hidden {
+            display: none;
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #0b0a0a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Do you want me to die?</h1>
+    <button class="yes" onclick="response('yes')">Yes</button>
+    <button class="no" onclick="response('no')">No</button>
+
+    <p id="message"></p>
+    <p id="accountDetails" class="hidden">AZA: 9026347805 (Moniepoint)</p>
+
+    <script>
+        function response(answer) {
+            if (answer === 'yes') {
+                document.getElementById("message").innerText = "Okay, your wish.";
+                document.getElementById("accountDetails").style.display = "none";
+            } else {
+                document.getElementById("message").innerText = "Then send me some money!";
+                document.getElementById("accountDetails").style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
